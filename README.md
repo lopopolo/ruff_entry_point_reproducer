@@ -1,6 +1,6 @@
 # ruff_entry_point_reproducer
 
-Minimal reproduction of [bazelbuild/rules_python#1000].
+Minimal reproduction of (bazelbuild/rules_python#1000)[bazelbuild/rules_python#1000].
 
 [bazelbuild/rules_python#]: https://github.com/bazelbuild/rules_python/issues/1000
 
