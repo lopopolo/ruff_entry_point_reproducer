@@ -1,0 +1,11 @@
+load("//tools/ruff:defs.bzl", "ruff")
+
+ruff(
+    name = "ruff",
+)
+
+exports_files(
+    [
+        "pyproject.toml",
+    ],
+)

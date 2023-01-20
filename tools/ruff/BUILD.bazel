@@ -1,0 +1,22 @@
+load("@py_deps_tools_ruff//:requirements.bzl", "entry_point")
+load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+
+exports_files(
+    [
+        "requirements.txt",
+        "runner.template.py",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+# This rule adds a convenient way to update the requirements file.
+compile_pip_requirements(
+    name = "requirements",
+    tags = ["requires-network"],
+)
+
+alias(
+    name = "entry",
+    actual = entry_point("ruff"),
+    visibility = ["//visibility:public"],
+)
