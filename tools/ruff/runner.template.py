@@ -14,7 +14,7 @@ def main():
         os.chdir(workspace_root)
 
     ruff = Path("@@RUFF_BIN@@").resolve()
-    proc = subprocess.run([str(ruff), "--fix", ".])
+    proc = subprocess.run([str(ruff), "--fix", "."])
     return proc.returncode
 
 
